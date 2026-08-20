@@ -1,7 +1,272 @@
 document.addEventListener("DOMContentLoaded", function () {
 
 
+/* =====================================================
+   FAQ ACCORDION + SMOOTH WORD REVEAL
+===================================================== */
 
+const faqItems =
+    document.querySelectorAll(".faq-item");
+
+
+faqItems.forEach(function (item) {
+
+    const question =
+        item.querySelector(".faq-question");
+
+    const answer =
+        item.querySelector(".faq-answer p");
+
+
+    if (!question || !answer) {
+        return;
+    }
+
+
+    /*
+       Store the original answer.
+    */
+
+    const originalText =
+        answer.textContent.trim();
+
+
+    /*
+       Clear the original text.
+    */
+
+    answer.textContent = "";
+
+
+    /*
+       Split into WORDS instead of characters.
+
+       This prevents the browser from breaking
+       individual words in strange places.
+    */
+
+    const words =
+        originalText.split(/\s+/);
+
+
+    words.forEach(function (word, index) {
+
+        const span =
+            document.createElement("span");
+
+
+        span.className =
+            "faq-word";
+
+
+        span.textContent =
+            word;
+
+
+        answer.appendChild(span);
+
+
+        /*
+           Add a normal space after each word.
+        */
+
+        if (index < words.length - 1) {
+
+            answer.appendChild(
+                document.createTextNode(" ")
+            );
+
+        }
+
+    });
+
+
+    /*
+       Reveal words smoothly.
+    */
+
+    function writeAnswer() {
+
+        const wordElements =
+            answer.querySelectorAll(
+                ".faq-word"
+            );
+
+
+        wordElements.forEach(function (
+            word,
+            index
+        ) {
+
+            setTimeout(function () {
+
+                word.classList.add(
+                    "visible"
+                );
+
+            }, index * 55);
+
+        });
+
+    }
+
+
+    /*
+       Hide words again.
+    */
+
+    function resetAnswer() {
+
+        const wordElements =
+            answer.querySelectorAll(
+                ".faq-word"
+            );
+
+
+        wordElements.forEach(function (
+            word
+        ) {
+
+            word.classList.remove(
+                "visible"
+            );
+
+        });
+
+    }
+
+
+    /*
+       QUESTION CLICK
+    */
+
+    question.addEventListener(
+        "click",
+        function () {
+
+            const isActive =
+                item.classList.contains(
+                    "active"
+                );
+
+
+            /*
+               Close every other FAQ.
+            */
+
+            faqItems.forEach(function (
+                otherItem
+            ) {
+
+                if (
+                    otherItem !== item
+                ) {
+
+                    otherItem.classList.remove(
+                        "active"
+                    );
+
+
+                    const otherButton =
+                        otherItem.querySelector(
+                            ".faq-question"
+                        );
+
+
+                    if (otherButton) {
+
+                        otherButton.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+
+
+                    const otherAnswer =
+                        otherItem.querySelector(
+                            ".faq-answer p"
+                        );
+
+
+                    if (otherAnswer) {
+
+                        otherAnswer
+                            .querySelectorAll(
+                                ".faq-word"
+                            )
+                            .forEach(function (
+                                word
+                            ) {
+
+                                word.classList.remove(
+                                    "visible"
+                                );
+
+                            });
+
+                    }
+
+                }
+
+            });
+
+
+            /*
+               If already open,
+               close it.
+            */
+
+            if (isActive) {
+
+                item.classList.remove(
+                    "active"
+                );
+
+
+                question.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                resetAnswer();
+
+                return;
+
+            }
+
+
+            /*
+               Open selected FAQ.
+            */
+
+            item.classList.add(
+                "active"
+            );
+
+
+            question.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+
+            /*
+               Wait slightly for the answer
+               container to begin expanding.
+            */
+
+            setTimeout(function () {
+
+                writeAnswer();
+
+            }, 220);
+
+        }
+    );
+
+});
 
 
     /* =====================================================
