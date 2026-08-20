@@ -1,5 +1,210 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
+
+
+
+    /* =====================================================
+   PREMIUM PAGE LOADER
+===================================================== */
+
+const pageLoader =
+    document.getElementById("pageLoader");
+
+const loaderBar =
+    document.getElementById("loaderProgressBar");
+
+const loaderCounter =
+    document.getElementById("loaderCounter");
+
+
+let loaderStart =
+    performance.now();
+
+
+const loaderDuration =
+    1450;
+
+
+let pageLoaded =
+    false;
+
+
+function animateLoader(timestamp) {
+
+    if (!pageLoader) {
+        return;
+    }
+
+
+    const elapsed =
+        timestamp - loaderStart;
+
+
+    let progress =
+        Math.min(
+            elapsed / loaderDuration,
+            1
+        );
+
+
+    /*
+       Smooth easing.
+
+       Starts gently,
+       moves faster in the middle,
+       slows near 100%.
+    */
+
+    const eased =
+        1 - Math.pow(1 - progress, 3);
+
+
+    const percentage =
+        Math.round(eased * 100);
+
+
+    if (loaderBar) {
+
+        loaderBar.style.width =
+            percentage + "%";
+
+    }
+
+
+    if (loaderCounter) {
+
+        loaderCounter.textContent =
+            String(percentage).padStart(2, "0");
+
+    }
+
+
+    if (progress < 1) {
+
+        requestAnimationFrame(
+            animateLoader
+        );
+
+    } else {
+
+        finishPageLoader();
+
+    }
+
+}
+
+
+function finishPageLoader() {
+
+    if (pageLoaded) {
+        return;
+    }
+
+
+    pageLoaded = true;
+
+
+    /*
+       Make sure the counter reaches 100.
+    */
+
+    if (loaderBar) {
+
+        loaderBar.style.width =
+            "100%";
+
+    }
+
+
+    if (loaderCounter) {
+
+        loaderCounter.textContent =
+            "100";
+
+    }
+
+
+    /*
+       Small pause after 100%
+       before revealing the website.
+    */
+
+    setTimeout(function () {
+
+        if (pageLoader) {
+
+            pageLoader.classList.add(
+                "loaded"
+            );
+
+        }
+
+    }, 180);
+
+}
+
+
+/*
+   Start animation.
+*/
+
+requestAnimationFrame(
+    animateLoader
+);
+
+
+/*
+   If the website takes longer to load,
+   don't hide the loader until the page
+   is actually ready.
+
+   But never keep the client waiting
+   excessively.
+*/
+
+window.addEventListener(
+    "load",
+    function () {
+
+        const elapsed =
+            performance.now() - loaderStart;
+
+
+        if (
+            elapsed >=
+            loaderDuration
+        ) {
+
+            finishPageLoader();
+
+        } else {
+
+            const remaining =
+                loaderDuration - elapsed;
+
+
+            setTimeout(
+                finishPageLoader,
+                remaining
+            );
+
+        }
+
+    }
+);
+
+
+/*
+   Safety fallback.
+*/
+
+setTimeout(function () {
+
+    finishPageLoader();
+
+}, 10000);
+
     /* =====================================================
        HEADER
     ===================================================== */
@@ -431,3 +636,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 });
+
+
