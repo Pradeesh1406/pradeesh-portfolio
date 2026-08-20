@@ -98,7 +98,7 @@ img {
 
     color: #74746e;
 
-    font-size: 9px;
+    font-size: 10px;
 
     font-weight: 500;
 
@@ -170,7 +170,7 @@ img {
 
 .logo {
 
-    font-size: 25px;
+    font-size: 30px;
 
     font-weight: 600;
 
@@ -206,7 +206,7 @@ img {
 
     color: #a1a19a;
 
-    font-size: 12px;
+    font-size: 14px;
 
     transition: color .2s ease;
 
@@ -246,7 +246,7 @@ img {
 
     color: #e0e0da;
 
-    font-size: 11px;
+    font-size: 12px;
 
     transition:
         background .2s ease,
@@ -482,7 +482,7 @@ img {
 
     color: #6b6b65;
 
-    font-size: 9px;
+    font-size: 12px;
 
     letter-spacing: .16em;
 
@@ -506,7 +506,7 @@ img {
 
     color: #82827c;
 
-    font-size: 10px;
+    font-size: 12px;
 
 }
 
@@ -586,7 +586,7 @@ img {
 
     color: #898983;
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.85;
 
@@ -614,7 +614,7 @@ img {
 
     gap: 18px;
 
-    font-size: 10px;
+    font-size: 12px;
 
 }
 
@@ -658,7 +658,7 @@ img {
 
     color: #60605a;
 
-    font-size: 9px;
+    font-size: 12px;
 
     letter-spacing: .07em;
 
@@ -729,7 +729,7 @@ img {
 
     color: #71716b;
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.9;
 
@@ -747,7 +747,7 @@ img {
 
     border-bottom: 1px solid var(--text);
 
-    font-size: 10px;
+    font-size: 12px;
 
 }
 
@@ -810,7 +810,7 @@ img {
 
     color: #7e7e78;
 
-    font-size: 11px;
+    font-size: 14px;
 
     line-height: 1.8;
 
@@ -945,9 +945,9 @@ img {
 
 .project-heading > span {
 
-    color: #63635d;
+    color: #d8ee78;
 
-    font-size: 7px;
+    font-size: 9px;
 
     letter-spacing: .15em;
 
@@ -979,7 +979,7 @@ img {
 
     color: #85857f;
 
-    font-size: 11px;
+    font-size: 12px;
 
     line-height: 1.78;
 
@@ -997,7 +997,7 @@ img {
 
     padding-top: 13px;
 
-    border-top: 1px solid var(--dark-line);
+    border-top: 1px solid #d8ee78;
 
 }
 
@@ -1021,7 +1021,7 @@ img {
 
     color: #6e6e68;
 
-    font-size: 7px;
+    font-size: 10px;
 
 }
 
@@ -1494,7 +1494,7 @@ img {
 
     color: #73736d;
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.8;
 
@@ -1529,13 +1529,13 @@ img {
 
     color: #85857e;
 
-    font-size: 8px;
+    font-size: 10px;
 
 }
 
 .service h3 {
 
-    font-size: 21px;
+    font-size: 22px;
 
     font-weight: 500;
 
@@ -1551,7 +1551,7 @@ img {
 
     color: #75756f;
 
-    font-size: 11px;
+    font-size: 12px;
 
     line-height: 1.8;
 
@@ -1613,7 +1613,7 @@ img {
     font-size: clamp(
         45px,
         5vw,
-        68px
+        76px
     );
 
     font-weight: 500;
@@ -1660,7 +1660,7 @@ img {
 
     color: #707069;
 
-    font-size: 12px;
+    font-size: 14px !important;
 
     line-height: 1.9;
 
@@ -1687,7 +1687,7 @@ img {
 
     color: #7b7b74;
 
-    font-size: 7px;
+    font-size: 14px;
 
     letter-spacing: .13em;
 
@@ -1807,7 +1807,7 @@ img {
 
     color: #777;
 
-    font-size: 8px;
+    font-size: 10px;
 
 }
 
@@ -1815,7 +1815,7 @@ img {
 
     margin-top: 70px;
 
-    font-size: 20px;
+    font-size: 24px;
 
     font-weight: 500;
 
@@ -1829,7 +1829,7 @@ img {
 
     color: #74746e;
 
-    font-size: 11px;
+    font-size: 12px;
 
     line-height: 1.8;
 
@@ -1888,7 +1888,7 @@ img {
 
     flex-wrap: wrap;
 
-    gap: 7px;
+    gap: 8px;
 
     max-width: 800px;
 
@@ -1906,7 +1906,7 @@ img {
 
     color: #5f5f59;
 
-    font-size: 9px;
+    font-size: 12px;
 
 }
 
@@ -1943,7 +1943,7 @@ img {
 
     color: #7c7c76;
 
-    font-size: 10px;
+    font-size: 12px;
 
     letter-spacing: .12em;
 
@@ -1987,12 +1987,12 @@ img {
 
     color: #85857f;
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.85;
 
 }
-
+/* 
 .contact-actions {
 
     display: flex;
@@ -2048,6 +2048,313 @@ img {
 
     font-size: 8px;
 
+} */
+
+
+/* =========================================================
+   CONTACT ACTIONS
+========================================================= */
+
+
+.contact-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding:
+        18px 0;
+
+    border-top: 1px solid var(--dark-line);
+
+    color: #62625d;
+
+    font-size: 12px;
+
+    margin-top: 24px;
+
+}
+
+.contact-actions {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 1fr)
+        minmax(250px, 1fr);
+
+    gap: 14px;
+
+    max-width: 720px;
+
+    margin-top: 42px;
+
+}
+
+
+/* =========================================================
+   COMMON CONTACT CARD
+========================================================= */
+
+.contact-whatsapp,
+.contact-email-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 76px;
+
+    padding: 13px 16px;
+
+    border: 1px solid #383834;
+
+    border-radius: 12px;
+
+    transition:
+        transform .3s cubic-bezier(.16,1,.3,1),
+        border-color .3s ease,
+        background .3s ease;
+
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.contact-whatsapp {
+
+    background:
+        var(--accent);
+
+    border-color:
+        var(--accent);
+
+    color:
+        var(--dark);
+
+}
+
+
+.contact-whatsapp:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        var(--accent);
+
+}
+
+
+/* =========================================================
+   EMAIL
+========================================================= */
+
+.contact-email-card {
+
+    background:
+        rgba(255,255,255,.025);
+
+    color:
+        #e6e6e0;
+
+}
+
+
+.contact-email-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        #66665f;
+
+    background:
+        rgba(255,255,255,.045);
+
+}
+
+
+/* =========================================================
+   CONTACT ICON
+========================================================= */
+
+.contact-icon {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex: 0 0 auto;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(21,21,20,.12);
+
+}
+
+
+.contact-icon svg {
+
+    width:
+        20px;
+
+    height:
+        20px;
+
+    fill:
+        currentColor;
+
+}
+
+
+.email-icon {
+
+    background:
+        rgba(255,255,255,.07);
+
+    color:
+        #d8ee78;
+
+}
+
+
+/* =========================================================
+   CONTACT TEXT
+========================================================= */
+
+.contact-action-text {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+
+    min-width:
+        0;
+
+}
+
+
+.contact-action-text small {
+
+    font-size:
+        8px;
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        .14em;
+
+    text-transform:
+        uppercase;
+
+    opacity:
+        .55;
+
+}
+
+
+.contact-action-text strong {
+
+    display:
+        block;
+
+    font-size:
+        13px;
+
+    font-weight:
+        500;
+
+    line-height:
+        1.25;
+
+    letter-spacing:
+        -.02em;
+
+    overflow:
+        hidden;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.contact-arrow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        30px;
+
+    height:
+        30px;
+
+    margin-left:
+        auto;
+
+    flex: 0 0 auto;
+
+    border:
+        1px solid currentColor;
+
+    border-radius:
+        50%;
+
+    font-size:
+        14px;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.contact-whatsapp:hover .contact-arrow,
+.contact-email-card:hover .contact-arrow {
+
+    transform:
+        translate(3px,-3px);
+
 }
 
 .availability-dot {
@@ -2092,7 +2399,9 @@ img {
 
     color: #4e4e49;
 
-    font-size: 8px;
+    font-size: 10px;
+
+    margin-top: 20px;
 
 }
 
@@ -2586,7 +2895,7 @@ img {
 
     }
 
-    .contact-actions {
+    /* .contact-actions {
 
         display: flex;
 
@@ -2612,7 +2921,105 @@ img {
 
         font-size: 9px;
 
+    } */
+
+
+
+
+
+    .contact-actions {
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        width:
+            100%;
+
+        max-width:
+            100%;
+
+        gap:
+            11px;
+
+        margin-top:
+            30px;
+
     }
+
+
+    .contact-whatsapp,
+    .contact-email-card {
+
+        width:
+            100%;
+
+        min-height:
+            72px;
+
+        padding:
+            12px 14px;
+
+        border-radius:
+            11px;
+
+    }
+
+
+    .contact-icon {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+    }
+
+
+    .contact-icon svg {
+
+        width:
+            19px;
+
+        height:
+            19px;
+
+    }
+
+
+    .contact-action-text small {
+
+        font-size:
+            7px;
+
+    }
+
+
+    .contact-action-text strong {
+
+        font-size:
+            12px;
+
+    }
+
+
+    .contact-arrow {
+
+        width:
+            29px;
+
+        height:
+            29px;
+
+        font-size:
+            13px;
+
+    }
+
+
 
     .contact-bottom {
 
